@@ -1,6 +1,7 @@
 [debug] Other repositories:
 [debug] Default repositories:
 [debug] Using inline dependencies specified in Scala.
+[debug] no default cache defined: set to /Users/School/.ivy2/cache
 [debug] :: resolving dependencies :: client#client$sbt_2.10;1.0
 [debug] 	confs: [default]
 [debug] 	validate = true
@@ -3473,9 +3474,9 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#test-interface;1.0!test-interface.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.17!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar
-[debug] :: resolution report :: resolve 1458ms :: artifacts dl 32ms
-[debug] 	report for client#client$sbt_2.10;1.0 default produced in /Users/School/Downloads/Lab-2-Ebean/Frontend/target/scala-2.12/resolution-cache/reports/client-client$sbt_2.10-default.xml
-[debug] 	resolve done (1458ms resolve - 32ms download)
+[debug] :: resolution report :: resolve 1197ms :: artifacts dl 55ms
+[debug] 	report for client#client$sbt_2.10;1.0 default produced in /Users/School/Desktop/CS4345-search-engine/Frontend/target/scala-2.12/resolution-cache/reports/client-client$sbt_2.10-default.xml
+[debug] 	resolve done (1197ms resolve - 55ms download)
 [debug] Using inline dependencies specified in Scala.
 [debug] :: resolving dependencies :: client#client$sources_2.10;1.0
 [debug] 	confs: [default]
@@ -4983,6 +4984,6 @@
 [debug] 	[NOT REQUIRED] io.apigee.trireme#trireme-core;0.9.4!trireme-core.jar(src)
 [debug] 	[NOT REQUIRED] com.typesafe.play#play-exceptions;2.7.3!play-exceptions.jar(src)
 [debug] 	[NOT REQUIRED] org.scala-sbt#persist;0.13.17!persist.jar(src)
-[debug] :: resolution report :: resolve 296ms :: artifacts dl 21ms
-[debug] 	report for client#client$sources_2.10;1.0 default produced in /Users/School/Downloads/Lab-2-Ebean/Frontend/target/scala-2.12/resolution-cache/reports/client-client$sources_2.10-default.xml
-[debug] 	resolve done (296ms resolve - 21ms download)
+[debug] :: resolution report :: resolve 227ms :: artifacts dl 35ms
+[debug] 	report for client#client$sources_2.10;1.0 default produced in /Users/School/Desktop/CS4345-search-engine/Frontend/target/scala-2.12/resolution-cache/reports/client-client$sources_2.10-default.xml
+[debug] 	resolve done (227ms resolve - 35ms download)

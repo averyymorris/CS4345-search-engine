@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:/Users/School/Downloads/Lab-2-Ebean/Frontend/conf/routes
-// @DATE:Mon Apr 25 22:49:47 CDT 2022
+// @SOURCE:/Users/School/Desktop/CS4345-search-engine/Frontend/conf/routes
+// @DATE:Sun May 01 13:05:20 CDT 2022
 
 package controllers;
 
