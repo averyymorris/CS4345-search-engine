@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/School/Desktop/CS4345-search-engine/ebean-backend/conf/routes
-// @DATE:Sun May 01 13:03:25 CDT 2022
+// @DATE:Sun May 01 13:34:40 CDT 2022
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:17
+  // @LINE:14
   class ReversePaperController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +23,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:17
+    // @LINE:14
     def makeSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PaperController.makeSearch",
       """
@@ -59,7 +59,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:11
+  // @LINE:9
   class ReverseUserController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -67,7 +67,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:11
+    // @LINE:9
     def authenticate: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UserController.authenticate",
       """
@@ -77,7 +77,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:15
+    // @LINE:12
     def registerNew: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.UserController.registerNew",
       """

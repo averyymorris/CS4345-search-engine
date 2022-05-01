@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/School/Desktop/CS4345-search-engine/Frontend/conf/routes
-// @DATE:Sun May 01 13:15:58 CDT 2022
+// @DATE:Sun May 01 13:35:02 CDT 2022
 
 
 package router {

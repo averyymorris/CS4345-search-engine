@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/School/Desktop/CS4345-search-engine/ebean-backend/conf/routes
-// @DATE:Sun May 01 13:03:25 CDT 2022
+// @DATE:Sun May 01 13:34:40 CDT 2022
 
 
 package router {

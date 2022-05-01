@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/School/Desktop/CS4345-search-engine/Frontend/conf/routes
-// @DATE:Sun May 01 13:15:58 CDT 2022
+// @DATE:Sun May 01 13:35:02 CDT 2022
 
 package router
 
@@ -16,9 +16,9 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:7
   HomeController_2: controllers.HomeController,
-  // @LINE:19
+  // @LINE:14
   PaperController_1: controllers.PaperController,
-  // @LINE:32
+  // @LINE:21
   Assets_0: controllers.Assets,
   val prefix: String
 ) extends GeneratedRouter {
@@ -27,9 +27,9 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:7
     HomeController_2: controllers.HomeController,
-    // @LINE:19
+    // @LINE:14
     PaperController_1: controllers.PaperController,
-    // @LINE:32
+    // @LINE:21
     Assets_0: controllers.Assets
   ) = this(errorHandler, HomeController_2, PaperController_1, Assets_0, "/")
 
@@ -132,7 +132,7 @@ class Routes(
     )
   )
 
-  // @LINE:19
+  // @LINE:14
   private[this] lazy val controllers_PaperController_searchPage4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("search")))
   )
@@ -150,7 +150,7 @@ class Routes(
     )
   )
 
-  // @LINE:21
+  // @LINE:16
   private[this] lazy val controllers_PaperController_searchHandler5_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("search")))
   )
@@ -168,7 +168,7 @@ class Routes(
     )
   )
 
-  // @LINE:22
+  // @LINE:17
   private[this] lazy val controllers_PaperController_searchHandler6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("searchPage")))
   )
@@ -186,7 +186,7 @@ class Routes(
     )
   )
 
-  // @LINE:24
+  // @LINE:18
   private[this] lazy val controllers_PaperController_displayResultsPage7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("search/show")))
   )
@@ -199,12 +199,12 @@ class Routes(
       Nil,
       "GET",
       this.prefix + """search/show""",
-      """POST    /search                     controllers.PaperController.searchHandler()""",
+      """""",
       Seq()
     )
   )
 
-  // @LINE:32
+  // @LINE:21
   private[this] lazy val controllers_Assets_at8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
@@ -249,31 +249,31 @@ class Routes(
         controllers_HomeController_signupHandler3_invoker.call(HomeController_2.signupHandler())
       }
   
-    // @LINE:19
+    // @LINE:14
     case controllers_PaperController_searchPage4_route(params@_) =>
       call { 
         controllers_PaperController_searchPage4_invoker.call(PaperController_1.searchPage())
       }
   
-    // @LINE:21
+    // @LINE:16
     case controllers_PaperController_searchHandler5_route(params@_) =>
       call { 
         controllers_PaperController_searchHandler5_invoker.call(PaperController_1.searchHandler())
       }
   
-    // @LINE:22
+    // @LINE:17
     case controllers_PaperController_searchHandler6_route(params@_) =>
       call { 
         controllers_PaperController_searchHandler6_invoker.call(PaperController_1.searchHandler())
       }
   
-    // @LINE:24
+    // @LINE:18
     case controllers_PaperController_displayResultsPage7_route(params@_) =>
       call { 
         controllers_PaperController_displayResultsPage7_invoker.call(PaperController_1.displayResultsPage())
       }
   
-    // @LINE:32
+    // @LINE:21
     case controllers_Assets_at8_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         controllers_Assets_at8_invoker.call(Assets_0.at(path, file))

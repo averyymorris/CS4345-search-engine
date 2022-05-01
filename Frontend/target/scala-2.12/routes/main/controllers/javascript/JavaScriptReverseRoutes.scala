@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/School/Desktop/CS4345-search-engine/Frontend/conf/routes
-// @DATE:Sun May 01 13:15:58 CDT 2022
+// @DATE:Sun May 01 13:35:02 CDT 2022
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.play.libs.F
 // @LINE:7
 package controllers.javascript {
 
-  // @LINE:19
+  // @LINE:14
   class ReversePaperController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,7 +19,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:24
+    // @LINE:18
     def displayResultsPage: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PaperController.displayResultsPage",
       """
@@ -29,7 +29,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:21
+    // @LINE:16
     def searchHandler: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PaperController.searchHandler",
       """
@@ -43,7 +43,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:19
+    // @LINE:14
     def searchPage: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PaperController.searchPage",
       """
@@ -105,7 +105,7 @@ package controllers.javascript {
   
   }
 
-  // @LINE:32
+  // @LINE:21
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -113,7 +113,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:32
+    // @LINE:21
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """

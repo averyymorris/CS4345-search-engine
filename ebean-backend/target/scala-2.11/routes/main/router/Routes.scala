@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/School/Desktop/CS4345-search-engine/ebean-backend/conf/routes
-// @DATE:Sun May 01 13:03:25 CDT 2022
+// @DATE:Sun May 01 13:34:40 CDT 2022
 
 package router
 
@@ -18,9 +18,9 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:6
   HomeController_0: controllers.HomeController,
-  // @LINE:11
+  // @LINE:9
   UserController_1: controllers.UserController,
-  // @LINE:17
+  // @LINE:14
   PaperController_2: controllers.PaperController,
   val prefix: String
 ) extends GeneratedRouter {
@@ -29,9 +29,9 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:6
     HomeController_0: controllers.HomeController,
-    // @LINE:11
+    // @LINE:9
     UserController_1: controllers.UserController,
-    // @LINE:17
+    // @LINE:14
     PaperController_2: controllers.PaperController
   ) = this(errorHandler, HomeController_0, UserController_1, PaperController_2, "/")
 
@@ -76,7 +76,7 @@ class Routes(
     )
   )
 
-  // @LINE:11
+  // @LINE:9
   private[this] lazy val controllers_UserController_authenticate1_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("login")))
   )
@@ -93,7 +93,7 @@ class Routes(
     )
   )
 
-  // @LINE:15
+  // @LINE:12
   private[this] lazy val controllers_UserController_registerNew2_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("signup")))
   )
@@ -110,7 +110,7 @@ class Routes(
     )
   )
 
-  // @LINE:17
+  // @LINE:14
   private[this] lazy val controllers_PaperController_makeSearch3_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("makeSearch")))
   )
@@ -127,7 +127,7 @@ class Routes(
     )
   )
 
-  // @LINE:22
+  // @LINE:17
   private[this] lazy val controllers_PaperController_makeSearch4_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("searchPage")))
   )
@@ -139,8 +139,7 @@ class Routes(
       "makeSearch",
       Nil,
       "POST",
-      """ make a search
-POST    /searchPage                  controllers.UserController.makeSearch()""",
+      """ make a search""",
       this.prefix + """searchPage"""
     )
   )
@@ -154,25 +153,25 @@ POST    /searchPage                  controllers.UserController.makeSearch()""",
         controllers_HomeController_index0_invoker.call(HomeController_0.index)
       }
   
-    // @LINE:11
+    // @LINE:9
     case controllers_UserController_authenticate1_route(params) =>
       call { 
         controllers_UserController_authenticate1_invoker.call(UserController_1.authenticate())
       }
   
-    // @LINE:15
+    // @LINE:12
     case controllers_UserController_registerNew2_route(params) =>
       call { 
         controllers_UserController_registerNew2_invoker.call(UserController_1.registerNew())
       }
   
-    // @LINE:17
+    // @LINE:14
     case controllers_PaperController_makeSearch3_route(params) =>
       call { 
         controllers_PaperController_makeSearch3_invoker.call(PaperController_2.makeSearch())
       }
   
-    // @LINE:22
+    // @LINE:17
     case controllers_PaperController_makeSearch4_route(params) =>
       call { 
         controllers_PaperController_makeSearch4_invoker.call(PaperController_2.makeSearch())

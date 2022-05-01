@@ -5,21 +5,13 @@
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.index
 
-#GET     /papers/:query                     controllers.PaperController.index(query : String)
-
 #Login
 POST     /login                      controllers.UserController.authenticate()
-
 
 # Add User  {"name":name, "password":password}
 POST    /signup                      controllers.UserController.registerNew()
 
 POST    /makeSearch                  controllers.PaperController.makeSearch()
-#GET     /makeSearch/show/:id         controllers.PaperController.show(id : Integer)
 
 # make a search
-#POST    /searchPage                  controllers.UserController.makeSearch()
 POST    /searchPage                  controllers.PaperController.makeSearch()
-#GET     /search/show                controllers.PaperController.show(id : Integer)
-#POST    /show/:id                        controllers.PaperController.show(id : Integer)
-#GET    /show/:id                        controllers.PaperController.show(id : Integer)
