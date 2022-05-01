@@ -48,7 +48,6 @@ Seq[Any](format.raw/*3.1*/("""
 """),format.raw/*18.64*/("""
 """),format.raw/*19.94*/("""
             """),format.raw/*20.13*/("""<a href=""""),_display_(/*20.23*/routes/*20.29*/.PaperController.searchPage()),format.raw/*20.58*/("""">Click here for Search Page</a><br>
-            <a href=""""),_display_(/*21.23*/routes/*21.29*/.PaperController.createQuery()),format.raw/*21.59*/("""">Click here to create query</a>
 
         </header>
 
@@ -70,11 +69,11 @@ Seq[Any](format.raw/*3.1*/("""
 
               /*
                   -- GENERATED --
-                  DATE: 2022-04-25T22:31:33.301
-                  SOURCE: /Users/School/Downloads/Lab-2-Ebean/Frontend/app/views/index.scala.html
-                  HASH: ff34243d84dab97925446187cef81e36e53481fe
-                  MATRIX: 960->18|1050->38|1116->36|1143->76|1170->77|1506->386|1534->393|1568->462|1597->556|1638->569|1675->579|1690->585|1740->614|1826->673|1841->679|1892->709
-                  LINES: 28->2|31->4|34->3|35->5|36->6|46->16|46->16|48->18|49->19|50->20|50->20|50->20|50->20|51->21|51->21|51->21
+                  DATE: 2022-05-01T13:27:20.594
+                  SOURCE: /Users/School/Desktop/CS4345-search-engine/Frontend/app/views/index.scala.html
+                  HASH: 5bc0b47620a61854016b46aaa9f086f0021c8864
+                  MATRIX: 960->18|1050->38|1116->36|1143->76|1170->77|1506->386|1534->393|1568->462|1597->556|1638->569|1675->579|1690->585|1740->614
+                  LINES: 28->2|31->4|34->3|35->5|36->6|46->16|46->16|48->18|49->19|50->20|50->20|50->20|50->20
                   -- GENERATED --
               */
           

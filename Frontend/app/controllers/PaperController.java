@@ -18,7 +18,7 @@ import play.mvc.Result;
 
 import javax.inject.Inject;
 
-public class PaperController extends Controller{
+public class PaperController extends Controller {
     @Inject
     HttpExecutionContext ec;
 
@@ -44,12 +44,11 @@ public class PaperController extends Controller{
     public CompletionStage<Result> searchHandler() {
         System.out.println("In search handler");
         Form<Query> searchForm = formFactory.form(Query.class).bindFromRequest();
-        if (searchForm.hasErrors()){
+        if (searchForm.hasErrors()) {
             return (CompletionStage<Result>) badRequest(views.html.register.render(null));
         }
         return searchForm.get().analyzeSearchQuery()
                 .thenApplyAsync((WSResponse r) -> {
-                    System.out.println("r as Json = " + r.asJson());
                     JsonNode myjson = r.asJson(); //creates JsonNode, myjson
                     String jsonStr = Json.stringify(myjson);
                     JsonNode json = Json.parse(jsonStr);
@@ -76,12 +75,4 @@ public class PaperController extends Controller{
         return ok();
     }
 
-    public Result createQuery() {
-        Form<Query> queryForm = formFactory.form(Query.class).bindFromRequest();
-        return ok(views.html.createQuery.render(queryForm));
-    }
-
-    public Result saveQuery() {
-        return ok();
-    }
 }

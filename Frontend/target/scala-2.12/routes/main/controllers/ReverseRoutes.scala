@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/School/Desktop/CS4345-search-engine/Frontend/conf/routes
-// @DATE:Sun May 01 13:05:20 CDT 2022
+// @DATE:Sun May 01 13:15:58 CDT 2022
 
 import play.api.mvc.Call
 
@@ -11,43 +11,17 @@ import _root_.play.libs.F
 // @LINE:7
 package controllers {
 
-  // @LINE:15
+  // @LINE:19
   class ReversePaperController(_prefix: => String) {
     def _defaultPrefix: String = {
       if (_prefix.endsWith("/")) "" else "/"
     }
 
   
-    // @LINE:26
-    def show(id:Integer): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "papers/" + play.core.routing.dynamicString(implicitly[play.api.mvc.PathBindable[Integer]].unbind("id", id)))
-    }
-  
     // @LINE:24
     def displayResultsPage(): Call = {
-    
-      () match {
       
-        // @LINE:24
-        case ()  =>
-          
-          Call("GET", _prefix + { _defaultPrefix } + "search/show")
-      
-      }
-    
-    }
-  
-    // @LINE:19
-    def searchPage(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "search")
-    }
-  
-    // @LINE:15
-    def createQuery(): Call = {
-      
-      Call("GET", _prefix + { _defaultPrefix } + "query/create")
+      Call("GET", _prefix + { _defaultPrefix } + "search/show")
     }
   
     // @LINE:21
@@ -64,10 +38,10 @@ package controllers {
     
     }
   
-    // @LINE:17
-    def saveQuery(): Call = {
+    // @LINE:19
+    def searchPage(): Call = {
       
-      Call("POST", _prefix + { _defaultPrefix } + "query/create")
+      Call("GET", _prefix + { _defaultPrefix } + "search")
     }
   
   }

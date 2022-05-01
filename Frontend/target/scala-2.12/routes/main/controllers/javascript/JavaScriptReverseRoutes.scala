@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/School/Desktop/CS4345-search-engine/Frontend/conf/routes
-// @DATE:Sun May 01 13:05:20 CDT 2022
+// @DATE:Sun May 01 13:15:58 CDT 2022
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -11,7 +11,7 @@ import _root_.play.libs.F
 // @LINE:7
 package controllers.javascript {
 
-  // @LINE:15
+  // @LINE:19
   class ReversePaperController(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -19,46 +19,12 @@ package controllers.javascript {
     }
 
   
-    // @LINE:26
-    def show: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.PaperController.show",
-      """
-        function(id0) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "papers/" + encodeURIComponent((""" + implicitly[play.api.mvc.PathBindable[Integer]].javascriptUnbind + """)("id", id0))})
-        }
-      """
-    )
-  
     // @LINE:24
     def displayResultsPage: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.PaperController.displayResultsPage",
       """
         function() {
-        
-          if (true) {
-            return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search/show"})
-          }
-        
-        }
-      """
-    )
-  
-    // @LINE:19
-    def searchPage: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.PaperController.searchPage",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search"})
-        }
-      """
-    )
-  
-    // @LINE:15
-    def createQuery: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.PaperController.createQuery",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "query/create"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search/show"})
         }
       """
     )
@@ -77,12 +43,12 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:17
-    def saveQuery: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.PaperController.saveQuery",
+    // @LINE:19
+    def searchPage: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.PaperController.searchPage",
       """
         function() {
-          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "query/create"})
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "search"})
         }
       """
     )

@@ -35,9 +35,9 @@ public class User {
 
     public CompletionStage<WSResponse> checkAuthorized() {
 
-        WSClient ws = play.test.WSTestClient.newClient(9001);
+        WSClient ws = play.test.WSTestClient.newClient(9002);
         //add username password
-        WSRequest request = ws.url("http://localhost:9001/login");
+        WSRequest request = ws.url("http://localhost:9002/login");
         System.out.println("request = " + request);
         ObjectNode res = Json.newObject();
         res.put("username", this.username);
@@ -53,7 +53,7 @@ public class User {
 
     public  CompletionStage<WSResponse> registerUser() {
 
-        WSClient ws = play.test.WSTestClient.newClient(9001);
+        WSClient ws = play.test.WSTestClient.newClient(9002);
         // send this. user
         ObjectNode res = Json.newObject();
         res.put("username", this.username);
@@ -62,7 +62,7 @@ public class User {
         System.out.println(username);
         System.out.println(password);
 
-        WSRequest request = ws.url("http://localhost:9001/signup");
+        WSRequest request = ws.url("http://localhost:9002/signup");
         System.out.println(request);
         return request.addHeader("Content-Type", "application/json")
                 .post(res)

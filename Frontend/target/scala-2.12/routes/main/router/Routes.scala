@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/School/Desktop/CS4345-search-engine/Frontend/conf/routes
-// @DATE:Sun May 01 13:05:20 CDT 2022
+// @DATE:Sun May 01 13:15:58 CDT 2022
 
 package router
 
@@ -16,7 +16,7 @@ class Routes(
   override val errorHandler: play.api.http.HttpErrorHandler, 
   // @LINE:7
   HomeController_2: controllers.HomeController,
-  // @LINE:15
+  // @LINE:19
   PaperController_1: controllers.PaperController,
   // @LINE:32
   Assets_0: controllers.Assets,
@@ -27,7 +27,7 @@ class Routes(
    def this(errorHandler: play.api.http.HttpErrorHandler,
     // @LINE:7
     HomeController_2: controllers.HomeController,
-    // @LINE:15
+    // @LINE:19
     PaperController_1: controllers.PaperController,
     // @LINE:32
     Assets_0: controllers.Assets
@@ -48,14 +48,10 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """login""", """controllers.HomeController.loginHandler()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """signup""", """controllers.HomeController.signup()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """register""", """controllers.HomeController.signupHandler()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query/create""", """controllers.PaperController.createQuery()"""),
-    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """query/create""", """controllers.PaperController.saveQuery()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search""", """controllers.PaperController.searchPage()"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search""", """controllers.PaperController.searchHandler()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """searchPage""", """controllers.PaperController.searchHandler()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """search/show""", """controllers.PaperController.displayResultsPage()"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """papers/""" + "$" + """id<[^/]+>""", """controllers.PaperController.show(id:Integer)"""),
-    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """papers/show""", """controllers.PaperController.displayResultsPage()"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """assets/""" + "$" + """file<.+>""", """controllers.Assets.at(path:String = "/public", file:String)"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
@@ -136,47 +132,11 @@ class Routes(
     )
   )
 
-  // @LINE:15
-  private[this] lazy val controllers_PaperController_createQuery4_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("query/create")))
-  )
-  private[this] lazy val controllers_PaperController_createQuery4_invoker = createInvoker(
-    PaperController_1.createQuery(),
-    play.api.routing.HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.PaperController",
-      "createQuery",
-      Nil,
-      "GET",
-      this.prefix + """query/create""",
-      """""",
-      Seq("""nocsrf""")
-    )
-  )
-
-  // @LINE:17
-  private[this] lazy val controllers_PaperController_saveQuery5_route = Route("POST",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("query/create")))
-  )
-  private[this] lazy val controllers_PaperController_saveQuery5_invoker = createInvoker(
-    PaperController_1.saveQuery(),
-    play.api.routing.HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.PaperController",
-      "saveQuery",
-      Nil,
-      "POST",
-      this.prefix + """query/create""",
-      """""",
-      Seq("""nocsrf""")
-    )
-  )
-
   // @LINE:19
-  private[this] lazy val controllers_PaperController_searchPage6_route = Route("GET",
+  private[this] lazy val controllers_PaperController_searchPage4_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("search")))
   )
-  private[this] lazy val controllers_PaperController_searchPage6_invoker = createInvoker(
+  private[this] lazy val controllers_PaperController_searchPage4_invoker = createInvoker(
     PaperController_1.searchPage(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -191,10 +151,10 @@ class Routes(
   )
 
   // @LINE:21
-  private[this] lazy val controllers_PaperController_searchHandler7_route = Route("POST",
+  private[this] lazy val controllers_PaperController_searchHandler5_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("search")))
   )
-  private[this] lazy val controllers_PaperController_searchHandler7_invoker = createInvoker(
+  private[this] lazy val controllers_PaperController_searchHandler5_invoker = createInvoker(
     PaperController_1.searchHandler(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -209,10 +169,10 @@ class Routes(
   )
 
   // @LINE:22
-  private[this] lazy val controllers_PaperController_searchHandler8_route = Route("GET",
+  private[this] lazy val controllers_PaperController_searchHandler6_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("searchPage")))
   )
-  private[this] lazy val controllers_PaperController_searchHandler8_invoker = createInvoker(
+  private[this] lazy val controllers_PaperController_searchHandler6_invoker = createInvoker(
     PaperController_1.searchHandler(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -227,10 +187,10 @@ class Routes(
   )
 
   // @LINE:24
-  private[this] lazy val controllers_PaperController_displayResultsPage9_route = Route("GET",
+  private[this] lazy val controllers_PaperController_displayResultsPage7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("search/show")))
   )
-  private[this] lazy val controllers_PaperController_displayResultsPage9_invoker = createInvoker(
+  private[this] lazy val controllers_PaperController_displayResultsPage7_invoker = createInvoker(
     PaperController_1.displayResultsPage(),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -244,47 +204,11 @@ class Routes(
     )
   )
 
-  // @LINE:26
-  private[this] lazy val controllers_PaperController_show10_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("papers/"), DynamicPart("id", """[^/]+""",true)))
-  )
-  private[this] lazy val controllers_PaperController_show10_invoker = createInvoker(
-    PaperController_1.show(fakeValue[Integer]),
-    play.api.routing.HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.PaperController",
-      "show",
-      Seq(classOf[Integer]),
-      "GET",
-      this.prefix + """papers/""" + "$" + """id<[^/]+>""",
-      """""",
-      Seq()
-    )
-  )
-
-  // @LINE:27
-  private[this] lazy val controllers_PaperController_displayResultsPage11_route = Route("GET",
-    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("papers/show")))
-  )
-  private[this] lazy val controllers_PaperController_displayResultsPage11_invoker = createInvoker(
-    PaperController_1.displayResultsPage(),
-    play.api.routing.HandlerDef(this.getClass.getClassLoader,
-      "router",
-      "controllers.PaperController",
-      "displayResultsPage",
-      Nil,
-      "GET",
-      this.prefix + """papers/show""",
-      """""",
-      Seq()
-    )
-  )
-
   // @LINE:32
-  private[this] lazy val controllers_Assets_at12_route = Route("GET",
+  private[this] lazy val controllers_Assets_at8_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at12_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at8_invoker = createInvoker(
     Assets_0.at(fakeValue[String], fakeValue[String]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -325,58 +249,34 @@ class Routes(
         controllers_HomeController_signupHandler3_invoker.call(HomeController_2.signupHandler())
       }
   
-    // @LINE:15
-    case controllers_PaperController_createQuery4_route(params@_) =>
-      call { 
-        controllers_PaperController_createQuery4_invoker.call(PaperController_1.createQuery())
-      }
-  
-    // @LINE:17
-    case controllers_PaperController_saveQuery5_route(params@_) =>
-      call { 
-        controllers_PaperController_saveQuery5_invoker.call(PaperController_1.saveQuery())
-      }
-  
     // @LINE:19
-    case controllers_PaperController_searchPage6_route(params@_) =>
+    case controllers_PaperController_searchPage4_route(params@_) =>
       call { 
-        controllers_PaperController_searchPage6_invoker.call(PaperController_1.searchPage())
+        controllers_PaperController_searchPage4_invoker.call(PaperController_1.searchPage())
       }
   
     // @LINE:21
-    case controllers_PaperController_searchHandler7_route(params@_) =>
+    case controllers_PaperController_searchHandler5_route(params@_) =>
       call { 
-        controllers_PaperController_searchHandler7_invoker.call(PaperController_1.searchHandler())
+        controllers_PaperController_searchHandler5_invoker.call(PaperController_1.searchHandler())
       }
   
     // @LINE:22
-    case controllers_PaperController_searchHandler8_route(params@_) =>
+    case controllers_PaperController_searchHandler6_route(params@_) =>
       call { 
-        controllers_PaperController_searchHandler8_invoker.call(PaperController_1.searchHandler())
+        controllers_PaperController_searchHandler6_invoker.call(PaperController_1.searchHandler())
       }
   
     // @LINE:24
-    case controllers_PaperController_displayResultsPage9_route(params@_) =>
+    case controllers_PaperController_displayResultsPage7_route(params@_) =>
       call { 
-        controllers_PaperController_displayResultsPage9_invoker.call(PaperController_1.displayResultsPage())
-      }
-  
-    // @LINE:26
-    case controllers_PaperController_show10_route(params@_) =>
-      call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_PaperController_show10_invoker.call(PaperController_1.show(id))
-      }
-  
-    // @LINE:27
-    case controllers_PaperController_displayResultsPage11_route(params@_) =>
-      call { 
-        controllers_PaperController_displayResultsPage11_invoker.call(PaperController_1.displayResultsPage())
+        controllers_PaperController_displayResultsPage7_invoker.call(PaperController_1.displayResultsPage())
       }
   
     // @LINE:32
-    case controllers_Assets_at12_route(params@_) =>
+    case controllers_Assets_at8_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at12_invoker.call(Assets_0.at(path, file))
+        controllers_Assets_at8_invoker.call(Assets_0.at(path, file))
       }
   }
 }

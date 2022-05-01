@@ -11,10 +11,10 @@ GET     /signup                     controllers.HomeController.signup()
 
 GET     /register                   controllers.HomeController.signupHandler()
 
-+nocsrf
-GET     /query/create               controllers.PaperController.createQuery()
-+nocsrf
-POST    /query/create               controllers.PaperController.saveQuery()
+#+nocsrf
+#GET     /query/create               controllers.PaperController.createQuery()
+#+nocsrf
+#POST    /query/create               controllers.PaperController.saveQuery()
 
 GET     /search                      controllers.PaperController.searchPage()
 +nocsrf
@@ -23,8 +23,8 @@ GET     /searchPage                   controllers.PaperController.searchHandler(
 #POST    /search                     controllers.PaperController.searchHandler()
 GET     /search/show                controllers.PaperController.displayResultsPage()
 
-GET     /papers/:id                 controllers.PaperController.show(id : Integer)
-GET     /papers/show                controllers.PaperController.displayResultsPage()
+#GET     /papers/:id                 controllers.PaperController.show(id : Integer)
+#GET     /papers/show                controllers.PaperController.displayResultsPage()
 
 
 
