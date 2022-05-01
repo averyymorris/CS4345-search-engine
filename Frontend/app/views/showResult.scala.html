@@ -1,0 +1,19 @@
+@* @(paper: Paper) @(resJson: json)  @(paperResultJson: ObjectNode) @(paperResult: String)*@
+
+
+
+@(paper: Paper)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Show Results</title>
+    </head>
+    <body>
+        <h1>Here are the results of your query:</h1>
+        <p>Paper Title: @paper.paperTitle</p>
+        <p>Paper URL: @paper.paperUrl</p>
+        <p>Paper Summary: @paper.paperAbstract</p>
+
+    </body>
+</html>

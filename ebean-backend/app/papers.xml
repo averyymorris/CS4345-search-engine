@@ -1,0 +1,100 @@
+<!-- <doc>
+    <title></title>
+    <url></url>
+    <field></field>
+    <conference></conference>
+    <abstract></abstract>
+    ...
+</doc> -->
+<papers>
+    <doc>
+        <title>A Method for Obtaining Digital Signatures and Public-Key Cryptosystems</title>
+        <url>http://people.csail.mit.edu/rivest/Rsapaper.pdf</url>
+        <field>cryptography</field>
+        <conference></conference>
+        <abstract>An encryption method is presented with the novel property that publicly re- vealing an encryption key does not thereby reveal the corresponding decryption key. This has two important consequences:
+            1. Couriers or other secure means are not needed to transmit keys, since a message can be enciphered using an encryption key publicly revealed by the intended recipient. Only he can decipher the message, since only he knows the corresponding decryption key.
+            2. A message can be “signed” using a privately held decryption key. Anyone can verify this signature using the corresponding publicly revealed en- cryption key. Signatures cannot be forged, and a signer cannot later deny the validity of his signature. This has obvious applications in “electronic mail” and “electronic funds transfer” systems.
+            A message is encrypted by representing it as a number M, raising M to a publicly specified power e, and then taking the remainder when the result is divided by the publicly specified product, n, of two large secret prime numbers p and q. Decryption is similar; only a different, secret, power d is used, where e·d≡1 (mod(p−1)·(q−1)). Thesecurityofthesystemrestsinparton the difficulty of factoring the published divisor, n.
+            Key Words and Phrases: digital signatures, public-key cryptosystems, pri- vacy, authentication, security, factorization, prime number, electronic mail, message-passing, electronic funds transfer, cryptography.</abstract>
+        ...
+    </doc>
+
+    <doc>
+        <title>Twenty Years of Attacks on the RSA Cryptosystem</title>
+        <url>https://crypto.stanford.edu/~dabo/papers/RSA-survey.pdf</url>
+        <field>cryptography</field>
+        <conference></conference>
+        <abstract>The RSA cryptosystem invented by Ron Rivest Adi Shamir, and Len Adleman, was first publicized in the August 1977 issue of Scientific American. The cryptosystem is most commonly used for providing privacy and ensuring authenticity of digital data. These days RSA is deployed in many commercial systems. It is used by web servers and browsers to secure web traffic, it is used to ensure privacy and authenticity of Email, it is used to secure remote login sessions, and it is at the heart of electronic credit-card payment systems. In short, RSA is frequently used in applications where security of digital data is a concern.</abstract>
+        ...
+    </doc>
+
+    <doc>
+        <title>Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2</title>
+        <url>https://papers.mathyvanhoef.com/ccs2017.pdf</url>
+        <field>cryptography</field>
+        <conference></conference>
+        <abstract>We introduce the key reinstallation attack. This attack abuses design or implementation flaws in cryptographic protocols to reinstall an already-in-use key. This resets the key’s associated parameters such as transmit nonces and receive replay counters. Several types of cryptographic Wi-Fi handshakes are affected by the attack.
+            All protected Wi-Fi networks use the 4-way handshake to gen- erate a fresh session key. So far, this 14-year-old handshake has remained free from attacks, and is even proven secure. However, we show that the 4-way handshake is vulnerable to a key reinstalla- tion attack. Here, the adversary tricks a victim into reinstalling an already-in-use key. This is achieved by manipulating and replaying handshake messages. When reinstalling the key, associated param- eters such as the incremental transmit packet number (nonce) and receive packet number (replay counter) are reset to their initial value. Our key reinstallation attack also breaks the PeerKey, group key, and Fast BSS Transition (FT) handshake. The impact depends on the handshake being attacked, and the data-confidentiality pro- tocol in use. Simplified, against AES-CCMP an adversary can replay and decrypt (but not forge) packets. This makes it possible to hijack TCP streams and inject malicious data into them. Against WPA- TKIP and GCMP the impact is catastrophic: packets can be replayed, decrypted, and forged. Because GCMP uses the same authentication key in both communication directions, it is especially affected.
+            Finally, we confirmed our findings in practice, and found that every Wi-Fi device is vulnerable to some variant of our attacks. Notably, our attack is exceptionally devastating against Android 6.0: it forces the client into using a predictable all-zero encryption key.
+            KEYWORDS: security protocols; network security; attacks; key reinstallation; WPA2; nonce reuse; handshake; packet number; initialization vector</abstract>
+        ...
+    </doc>
+
+    <doc>
+        <title>Tidy Data</title>
+        <url>https://www.jstatsoft.org/article/view/v059i10</url>
+        <field>data science</field>
+        <conference></conference>
+        <abstract>A huge amount of effort is spent cleaning data to get it ready for analysis, but there has been little research on how to make data cleaning as easy and effective as possible. This paper tackles a small, but important, component of data cleaning: data tidying. Tidy datasets are easy to manipulate, model and visualize, and have a specific structure: each variable is a column, each observation is a row, and each type of observational unit is a table. This framework makes it easy to tidy messy datasets because only a small set of tools are needed to deal with a wide range of un-tidy datasets. This structure also makes it easier to develop tidy tools for data analysis, tools that both input and output tidy datasets. The advantages of a consistent data structure and matching tools are demonstrated with a case study free from mundane data manipulation chores.</abstract>
+        ...
+    </doc>
+
+    <doc>
+        <title>Dynamic Hash Tables</title>
+        <url>https://www.csd.uoc.gr/~hy460/pdf/Dynamic%20Hash%20Tables.pdf</url>
+        <field>data structures</field>
+        <conference></conference>
+        <abstract>Linear hashing and spiral storage are two dynamic hashing schemes originally designed for external
+            files. This paper shows how to adapt these two methods for hash tables stored in main memoy. The necessay data structures and algorithms are described, the expected performance is analyzed mathematically, and actual execution times are obtained and compared with alternative techniques. Linear hashing is found to be both faster and easier to implement than spiral storage. Two alternative techniques are considered: a simple unbalanced bina y tree and double hashing with periodic rehashing into a larger table. The retrieval time of linear hashing is similar to double hashing and substantially faster than a binary tree, except for vey small trees. The loading times of double hashing (with periodic reorganization), a bina y tree, and linear hashing are similar. Overall, linear hashing is a simple and efficient technique for applications where the cardinality of the key set is not known in advance.</abstract>
+        ...
+    </doc>
+
+    <doc>
+        <title>Simple, Fast, and Practical Non-Blocking and Blocking Concurrent Queue Algorithms</title>
+        <url>https://www.cs.rochester.edu/u/scott/papers/1996_PODC_queues.pdf</url>
+        <field>data structures</field>
+        <conference></conference>
+        <abstract>Drawing ideas from previous authors, we present a new non-blocking concurrent queue algorithm and a new two- lock queue algorithm in which one enqueue and one de- queue can proceed concurrently. Both algorithms are sim- ple, fast, and practical; we were surprised not to find them in the literature. Experiments on a 12-node SGI Challenge multiprocessor indicate that the new non-blocking queue consistently outperforms the best known alternatives; it is the clear algorithm of choice for machines that provide a universal atomic primitive (e.g. compare and swap or load linked/store conditional). The two-lock concurrent queue outperforms a single lock when several processes are competing simultaneously for access; it ap- pears to be the algorithm of choice for busy queues on ma- chines with non-universal atomic primitives (e.g. test and set). Since much of the motivation for non-blocking algorithms is rooted in their immunity to large, unpre- dictable delays in process execution, we report experimental results both for systems with dedicated processors and for systems with several processes multiprogrammed on each processor.
+            Keywords: concurrent queue, lock-free, non-blocking, compare and swap, multiprogramming.</abstract>
+        ...
+    </doc>
+
+    <doc>
+        <title>ETHEREUM: A SECURE DECENTRALISED GENERALISED TRANSACTION LEDGER</title>
+        <url>https://ethereum.github.io/yellowpaper/paper.pdf</url>
+        <field>cryptocurrency</field>
+        <conference></conference>
+        <abstract>The blockchain paradigm when coupled with cryptographically-secured transactions has demonstrated its utility through a number of projects, with Bitcoin being one of the most notable ones. Each such project can be seen as a simple application on a decentralised, but singleton, compute resource. We can call this paradigm a transactional singleton machine with shared-state.
+            Ethereum implements this paradigm in a generalised manner. Furthermore it provides a plurality of such resources, each with a distinct state and operating code but able to interact through a message-passing framework with others. We discuss its design, implementation issues, the opportunities it provides and the future hurdles we envisage.</abstract>
+        ...
+    </doc>
+
+    <doc>
+        <title>The PageRank Citation Ranking Bringing Order to the Web</title>
+        <url>http://ilpubs.stanford.edu:8090/422/1/1999-66.pdf</url>
+        <field>information retrieval</field>
+        <conference></conference>
+        <abstract>The importance of a Web page is inherently subjective matter, which depends on the readers interests, knowledge and attitudes. but there is still much that can be said objectively about the relative importance of Web pages. this paper desribes PageRank, a method for rating web pages objectively and mechanically, effectively measuring the human interest and attention devoted to them. we compate PageRank to an idealized random Web Surfer.</abstract>
+        ...
+    </doc>
+
+    <doc>
+        <title>Authoritative Sources in a Hyperlinked Environment</title>
+        <url>https://www.cs.cornell.edu/home/kleinber/auth.pdf</url>
+        <field>information retrieval</field>
+        <conference></conference>
+        <abstract>The network structure of a hyperlinked environment can be a rich source of in- formation about the content of the environment, provided we have effective means for understanding it. We develop a set of algorithmic tools for extracting information from the link structures of such environments, and report on experiments that demonstrate their effectiveness in a variety of contexts on the World Wide Web. The central issue we address within our framework is the distillation of broad search topics, through the discovery of “authoritative” information sources on such topics. We propose and test an algorithmic formulation of the notion of authority, based on the relationship between a set of relevant authoritative pages and the set of “hub pages” that join them together in the link structure. Our formulation has connections to the eigenvectors of certain matrices associated with the link graph; these connections in turn motivate additional heuristics for link-based analysis.</abstract>
+        ...
+    </doc>
+</papers>

@@ -1,0 +1,26 @@
+@* parameters *@
+@(message: String)
+
+@import java.math.BigInteger;var i = 0
+
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <header class="topbar">
+            <h1 class="focused" style="font-size: 37px;
+                color: #57a957">
+                <strong>Login Message</strong>
+            </h1>
+            <p class="focused" style="font-size: 20px;
+                color: #3F51B5">@message</p>
+
+@*            <a href="searchPage.scala.html">Search Page</a>*@
+@*             <a href="@routes.HomeController.searchPage()">Click here for Search Page</a>*@
+            <a href="@routes.PaperController.searchPage()">Click here for Search Page</a><br>
+            <a href="@routes.PaperController.createQuery()">Click here to create query</a>
+
+        </header>
+
+    </body>
+</html>

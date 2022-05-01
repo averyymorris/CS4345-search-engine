@@ -1,0 +1,18 @@
+@(queryForm : Form[Query])
+@import helper._
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Create Query</title>
+    </head>
+    <body>
+        <h1>Create Query</h1>
+        @helper.form(action = routes.PaperController.saveQuery()) {
+            @helper.inputText(queryForm("Query"))
+
+            <input type="submit" value="Create Query">
+        }
+</body>
+</html>
