@@ -43,30 +43,6 @@ public class HomeController extends Controller {
 
 
 
-//    public CompletionStage<Result> searchHandler() {
-//        Form<Paper> searchForm = formFactory.form(Paper.class).bindFromRequest();
-//        if (searchForm.hasErrors()){
-//            //return badRequest();
-//            return (CompletionStage<Result>) badRequest(views.html.register.render(null));
-//        }
-//        //return searchForm.get().analyzeSearchQuery();
-//
-//        return searchForm.get().analyzeSearchQuery()
-//                .thenApplyAsync((WSResponse r) -> {
-//                    if (r.getStatus() == 200 && r.asJson() != null) {
-//                        System.out.println("success");
-//                        System.out.println(r.asJson());
-//                        return ok("true");
-//                    } else {
-//                        System.out.println("response null");
-//                        return badRequest();
-//                    }
-//                }, ec.current());
-//
-//    }
-
-
-
     public CompletionStage<Result> loginHandler() {
         Form<User> loginForm = formFactory.form(User.class).bindFromRequest();
         if (loginForm.hasErrors()){

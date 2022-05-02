@@ -49,6 +49,8 @@ public class PaperController extends Controller {
         }
         return searchForm.get().analyzeSearchQuery()
                 .thenApplyAsync((WSResponse r) -> {
+                    System.out.println("r = " + r);
+                    System.out.println("r as json = " + r.asJson());
                     JsonNode myjson = r.asJson(); //creates JsonNode, myjson
                     String jsonStr = Json.stringify(myjson);
                     JsonNode json = Json.parse(jsonStr);

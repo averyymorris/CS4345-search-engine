@@ -27,7 +27,7 @@ public class PaperIndex {
         }
 
         ArrayList<String> myToks = new ArrayList<String>();
-        myToks = Analyzer.analyzeText(document.getPaperAbstract());
+        myToks = utils.Analyzer.analyzeText(document.getPaperAbstract());
         String tokn;
         Integer doc;
         for(int i = 0; i < myToks.size(); i++) {
@@ -63,7 +63,7 @@ public class PaperIndex {
 
     //add search method. this method will return the documents that contain words from the query
     public static ArrayList<Integer> search(String query, ArrayList<Paper> documents) {
-        ArrayList<String> analyzedQuery = Analyzer.analyzeText(query);
+        ArrayList<String> analyzedQuery = utils.Analyzer.analyzeText(query);
         ArrayList<Integer> resultDocs = new ArrayList<>();
         resultDocs = results(analyzedQuery, resultDocs);
         System.out.println("Here are the results of your query " + "\"" + query + "\"");

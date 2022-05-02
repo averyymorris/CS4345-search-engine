@@ -7,6 +7,7 @@ import org.xml.sax.SAXException;
 import java.util.StringTokenizer;
 import javax.xml.parsers.*;
 
+
 public class Paper {
     public int docId;
     public String title;

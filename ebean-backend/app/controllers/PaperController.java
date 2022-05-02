@@ -31,7 +31,11 @@ public class PaperController extends Controller {
             System.out.println(paper);
             ObjectNode result = Json.newObject();
             if (paper == null) {
-                result = null;
+                result.put("paperTitle", false);
+                result.put("paperUrl", false);
+                result.put("paperAbstract", false);
+                //set status of result to 404
+                System.out.println("res = " + result);
                 return ok(result);
                 //return notFound("Paper not found");
             }

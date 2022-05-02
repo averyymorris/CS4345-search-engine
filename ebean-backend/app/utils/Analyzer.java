@@ -1,7 +1,9 @@
-package models;
-import java.util.*;
-import java.lang.String;
+package utils;
+
+import java.util.ArrayList;
 import java.util.StringTokenizer;
+
+//put in utilities folder
 
 public class Analyzer {
     public static String lowerText(String text){

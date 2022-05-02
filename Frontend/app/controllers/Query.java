@@ -24,10 +24,14 @@ public class Query {
         res.put("userQuery", this.userQuery);
         //System.out.println(" user query = " + userQuery);
         WSRequest request = ws.url("http://localhost:9002/makeSearch"); //send to backend
-        System.out.println("request = " + request);
+        System.out.println("request body = " + request.getBody());
+        if(request.getBody().isPresent() == false) {
+            System.out.println("request body is false");
+        }
         return request.addHeader("Content-Type", "application/json")
                 .post(res)
                 .thenApply((WSResponse r) -> {
+
                     return r;
                 });
 
