@@ -3,8 +3,6 @@ package utils;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-//put in utilities folder
-
 public class Analyzer {
     public static String lowerText(String text){
         text = text.toLowerCase(); //lower text

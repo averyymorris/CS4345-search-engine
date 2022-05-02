@@ -1,0 +1,16 @@
+@(articles: ArrayList[Article])
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Show Results</title>
+    </head>
+    <body>
+        <h1>All articles:</h1>
+        @for(article <- articles) {
+            <p>Article Id: @article.articleId</p>
+            <p>Article Title: @article.articleTitle</p>
+            <p>Article Summary: @article.articleAbstract</p>
+        }
+    </body>
+</html>

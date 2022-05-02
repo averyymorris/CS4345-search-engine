@@ -21,7 +21,7 @@ public class User extends Model {
     @Constraints.Required
     public String password;
 
-    public String userQuery;
+    //public String userQuery;
 
     public static Find<Long, User> find = new Find<Long, User>(){};
 
