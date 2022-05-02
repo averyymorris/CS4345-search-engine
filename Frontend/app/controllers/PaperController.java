@@ -60,7 +60,7 @@ public class PaperController extends Controller {
                         return ok(views.html.showResult.render(myPaper)); // to display the json in the results page
                     } else {
                         System.out.println("response null");
-                        return badRequest();
+                        return ok(views.html.noResultsPage.render());
                     }
                 }, ec.current());
 

@@ -29,10 +29,13 @@ public class PaperController extends Controller {
         for (int i = 0; i < resID.size(); i++) {
             Paper paper = Paper.findById(resID.get(i));
             System.out.println(paper);
-            if (paper == null) {
-                return notFound("Paper not found");
-            }
             ObjectNode result = Json.newObject();
+            if (paper == null) {
+                result = null;
+                return ok(result);
+                //return notFound("Paper not found");
+            }
+
             result.put("paperTitle", paper.getTitle());
             result.put("paperUrl", paper.getUrl());
             result.put("paperAbstract", paper.getPaperAbstract());
