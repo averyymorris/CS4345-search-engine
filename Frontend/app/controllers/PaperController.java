@@ -49,14 +49,14 @@ public class PaperController extends Controller {
         }
         return searchForm.get().analyzeSearchQuery()
                 .thenApplyAsync((WSResponse r) -> {
-                    System.out.println("r = " + r);
-                    System.out.println("r as json = " + r.asJson());
-                    JsonNode myjson = r.asJson(); //creates JsonNode, myjson
-                    String jsonStr = Json.stringify(myjson);
-                    JsonNode json = Json.parse(jsonStr);
-                    Paper myPaper = Json.fromJson(json, Paper.class);
-                    System.out.println("myPaper object = " + myPaper);
                     if (r.getStatus() == 200 && r.asJson() != null) {
+                        System.out.println("r = " + r);
+                        System.out.println("r as json = " + r.asJson());
+                        JsonNode myjson = r.asJson(); //creates JsonNode, myjson
+                        String jsonStr = Json.stringify(myjson);
+                        JsonNode json = Json.parse(jsonStr);
+                        Paper myPaper = Json.fromJson(json, Paper.class);
+                        System.out.println("myPaper object = " + myPaper);
                         System.out.println("success");
                         System.out.println(r.asJson());
                         return ok(views.html.showResult.render(myPaper)); // to display the json in the results page
