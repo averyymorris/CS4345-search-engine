@@ -11,13 +11,21 @@ public class Article extends Model {
     public String articleTitle;
     public String articleAbstract;
 
-    public static Find<Integer, Article> find = new Find<Integer, Article>(){};
+    public static Find<Integer, Article> findId = new Find<Integer, Article>(){};
 
     public static Article findById(Integer id) {
-        return Article.find
+        return Article.findId
                 .where()
                 .eq("articleId", id)
                 .findUnique();
     }
+
+//    public static Find<String, Article> findQuery = new Find<String, Article>(){};
+//
+//    public static Article findByUserQuery(String query) {
+//        return Article.findQuery
+//                .where()
+//                .ilike("articleAbstract", query); //'% query %'
+//    }
 
 }

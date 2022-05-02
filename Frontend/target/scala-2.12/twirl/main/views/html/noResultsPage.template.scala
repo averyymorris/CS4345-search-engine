@@ -35,9 +35,10 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
     <head>
         <title>Show Results</title>
     </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <body>
         <h1>Your query did not come up with any results.</h1>
-        <a href=""""),_display_(/*8.19*/routes/*8.25*/.PaperController.searchPage()),format.raw/*8.54*/("""">Click here to go back to Search Page</a><br>
+        <a href=""""),_display_(/*9.19*/routes/*9.25*/.PaperController.searchPage()),format.raw/*9.54*/("""">Click here to go back to Search Page</a><br>
     </body>
 </html>"""))
       }
@@ -55,11 +56,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 
               /*
                   -- GENERATED --
-                  DATE: 2022-05-01T17:31:22.053
+                  DATE: 2022-05-02T18:52:39.190
                   SOURCE: /Users/School/Desktop/CS4345-search-engine/Frontend/app/views/noResultsPage.scala.html
-                  HASH: 57c5d892793a84640f83c533a2dc6424e0f34c76
-                  MATRIX: 1038->0|1237->173|1251->179|1300->208
-                  LINES: 33->1|40->8|40->8|40->8
+                  HASH: e7c38b9d094fbde3738b00bd6e1ce0bf4f940cb0
+                  MATRIX: 1038->0|1452->389|1466->395|1515->424
+                  LINES: 33->1|41->9|41->9|41->9
                   -- GENERATED --
               */
           

@@ -12,7 +12,7 @@ public class ArticlesController extends Controller {
     FormFactory formFactory;
 
     public Result index() {
-        List<Article> articles = Article.find.all();
+        //List<Article> articles = Article.find.all();
         //return ok(articleIndex.render(articles));
         return ok();
     }

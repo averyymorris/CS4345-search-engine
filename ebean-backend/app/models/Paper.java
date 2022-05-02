@@ -46,7 +46,6 @@ public class Paper {
         Document document = builder.parse(new File( "app/papers.xml"));
         document.getDocumentElement().normalize();
         NodeList nList = document.getElementsByTagName("doc");
-        System.out.println("============================");
         for (int i = 0; i < nList.getLength(); i++) {
             Node node = nList.item(i);
             if (node.getNodeType() == Node.ELEMENT_NODE) {
@@ -58,7 +57,6 @@ public class Paper {
                 id += 1;
                 Paper doc = new Paper(id, title, abstrct, url, field);
                 myPapers.add(doc);
-                //System.out.println(doc.title);
             }
         }
         return myPapers;

@@ -25,7 +25,6 @@ public class PaperIndex {
         if(!docs.containsValue(document.getDocId())){
             docs.put(document, document.getDocId());
         }
-
         ArrayList<String> myToks = new ArrayList<String>();
         myToks = utils.Analyzer.analyzeText(document.getPaperAbstract());
         String tokn;
@@ -42,10 +41,8 @@ public class PaperIndex {
             if(!l.contains(doc)) {
                 l.add(doc);
             }
-
             indeces.put(tokn, l);
         }
-        //System.out.println(this.indeces);
         return indeces;
     }
 
@@ -61,7 +58,6 @@ public class PaperIndex {
         return resultDocs;
     }
 
-    //add search method. this method will return the documents that contain words from the query
     public static ArrayList<Integer> search(String query, ArrayList<Paper> documents) {
         ArrayList<String> analyzedQuery = utils.Analyzer.analyzeText(query);
         ArrayList<Integer> resultDocs = new ArrayList<>();

@@ -18,6 +18,7 @@ public class PaperController extends Controller {
         System.out.println(req);
         String query = req.get("userQuery").asText();
         System.out.println(query);
+        //Article art = Article.findByUserQuery(query);
         PaperIndex myIndex = new PaperIndex();
         ArrayList<Paper> papers = Paper.allDocuments();
         for(int i = 0; i < papers.size(); i++) {
@@ -31,11 +32,11 @@ public class PaperController extends Controller {
                 article.save();
             }
         }
-        LinkedHashMap<String, ArrayList<Integer>> anotherIndex = new LinkedHashMap<>();
+        //LinkedHashMap<String, ArrayList<Integer>> anotherIndex = new LinkedHashMap<>();
         for (int i = 0; i < papers.size(); i++) {
             myIndex.indeces = myIndex.indexDoc(papers.get(i));
         }
-        anotherIndex = myIndex.indeces;
+        //anotherIndex = myIndex.indeces;
         ArrayList<Integer> resID = new ArrayList<>();
         resID = PaperIndex.search(query, papers);
         for (int i = 0; i < resID.size(); i++) {
@@ -50,11 +51,8 @@ public class PaperController extends Controller {
             System.out.println(paper);
             ObjectNode result = Json.newObject();
             if (paper == null) {
-                //set status of result to 404
                 return ok("false");
-                //return notFound("Paper not found");
             }
-
             result.put("paperTitle", paper.getTitle());
             result.put("paperUrl", paper.getUrl());
             result.put("paperAbstract", paper.getPaperAbstract());
@@ -71,6 +69,5 @@ public class PaperController extends Controller {
         }
         return ok(views.html.show.render(paper));
     }
-
 
 }

@@ -32,23 +32,10 @@
             <!-- Search Bar-->
         <div class="search">
             <h4>Scientist Social Network</h4>
-@*            <form action="@routes.HomeController.searchHandler()" method="GET">*@
-@*            <form action="@routes.PaperController.searchHandler()" method="GET">*@
             <form action="@routes.PaperController.searchHandler()" method="POST">
                 <input id="userQuery" name="userQuery" type="text" placeholder="Search for papers...">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button><br>
                 <a href="#">Advanced Search</a>
-@*              <form action="@routes.PaperController.searchPage()" method="GET">*@
-
-@*            <input id="userQuery" name="userQuery" type="text" class="validate">*@
-@*            <label for="userQuery">Query</label>*@
-
-@*                @helper.form(action = routes.PaperController.searchHandler()) {*@
-@*                    @helper.inputText(queryForm("Query"))*@
-
-@*                    <input type="submit" value="Submit Query">*@
-@*                    }*@
-
             </form>
         </div>
 

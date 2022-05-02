@@ -22,7 +22,7 @@ public class Query {
         WSClient ws = play.test.WSTestClient.newClient(9002);
         ObjectNode res = Json.newObject();
         res.put("userQuery", this.userQuery);
-        //System.out.println(" user query = " + userQuery);
+        //System.out.println("user query = " + userQuery);
         WSRequest request = ws.url("http://localhost:9002/makeSearch"); //send to backend
         System.out.println("request body = " + request.getBody());
         if(request.getBody().isPresent() == false) {
